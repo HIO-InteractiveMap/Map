@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
   .app {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100vh;
   }
 `;
