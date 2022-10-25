@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.3dbffee7.css","mappings":"AAAA,MACE,oBAAqB,CAErB,QAAO,CADP,eAAgB,CAEhB,eACF","sources":["test.css"],"sourcesContent":[".test {\r\n  border: 2px solid red;\r\n  min-width: 400px;\r\n  flex: 1;\r\n  overflow: hidden;\r\n}\r\n"],"names":[],"sourceRoot":""}
