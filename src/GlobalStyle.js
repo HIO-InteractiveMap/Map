@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --icon_background: rgba(216, 183, 167, 0.75);
+  --icon_foreground: #32221E;
+}
+
   * {
     margin: 0;
     padding: 0;

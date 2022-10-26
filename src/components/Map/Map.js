@@ -1,26 +1,38 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
+// Style
+import { Map__Wrapper } from './Map.styled';
+
 // Components
 import Icon from '../Icon/Icon';
 
 // Assets
 import MapIMG from '../../assets/Map_Downtown_EN_v2.png';
 
-const Map = ({ dimensions }) => {
-  const mapHeight = 2048;
-  const mapWidth = 1885;
-
-  if (dimensions.x == 0) return false;
-
+const Map = ({ children }) => {
   return (
-    <TransformWrapper limitToBounds={false} centerZoomedOut={true} initialScale={0.4} minScale={0.2} maxScale={2} initialPositionX={(75 / 100) * dimensions.x - mapWidth * 0.4} initialPositionY={(3.5 / 100) * dimensions.y}>
+    <TransformWrapper limitToBounds={false} initialScale={0.4} minScale={0.2} maxScale={2} doubleClick={{ disabled: true }}>
       <TransformComponent>
-        <img style={{ width: `${mapWidth}px`, height: `100%`, objectFit: 'contain' }} src={MapIMG} />
-        <Icon></Icon>
+        <Map__Wrapper src={MapIMG} />
+        {children}
       </TransformComponent>
     </TransformWrapper>
   );
 };
 
 export default Map;
+
+// Previous attempt at centering: Think the TransformWrapper is larger than the container div, need to look into
+// initialPositionX={(75 / 100) * dimensions.x - mapWidth * 0.4} initialPositionY={(3.5 / 100) * dimensions.y}
+
+// Content Container size
+// const contentRef = useRef(null);
+// const [dimensions, setDimensions] = useState({ x: 0, y: 0 });
+
+// useEffect(() => {
+//   setDimensions({
+//     x: contentRef.current?.offsetWidth,
+//     y: contentRef.current?.offsetHeight,
+//   });
+// }, []);
