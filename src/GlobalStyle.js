@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
   --blue: #1e90ff;
   --white: #ffffff;
+  --primary_color: #CF985F;
   --icon_background: rgba(216, 183, 167, 0.75);
   --icon_foreground: #32221E;
 }
@@ -12,9 +13,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 18px;
-    color: white;
+    color: var(--primary_color);
   }
 
   body {

@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 // Style
-import { Map__Wrapper } from './Map.styled';
+import { Map__Wrapper, Map__Container } from './Map.styled';
 
 // Components
 import Icon from '../Icon/Icon';
@@ -12,10 +12,17 @@ import MapIMG from '../../assets/Map_Downtown_EN_v2.png';
 
 const Map = ({ children }) => {
   return (
-    <TransformWrapper limitToBounds={false} initialScale={0.4} minScale={0.2} maxScale={2} doubleClick={{ disabled: true }}>
+    <TransformWrapper
+      limitToBounds={false}
+      initialScale={1}
+      minScale={0.2}
+      maxScale={2}
+      doubleClick={{ disabled: true }}>
       <TransformComponent>
-        <Map__Wrapper src={MapIMG} />
-        {children}
+        <Map__Container>
+          <Map__Wrapper src={MapIMG} />
+          {children}
+        </Map__Container>
       </TransformComponent>
     </TransformWrapper>
   );
