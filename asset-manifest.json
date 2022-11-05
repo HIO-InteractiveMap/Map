@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Map/static/js/main.6a67d494.js",
+    "main.js": "/Map/static/js/main.2e6d2e5e.js",
     "static/media/Map_Downtown_EN_v2.png": "/Map/static/media/Map_Downtown_EN_v2.27c46c8e3e1382eebf34.png",
     "static/media/LOGO.png": "/Map/static/media/LOGO.7695c02efb0ae57b907d.png",
     "static/media/Icon_Bank.png": "/Map/static/media/Icon_Bank.d100d3f999546e5b2834.png",
     "index.html": "/Map/index.html",
-    "main.6a67d494.js.map": "/Map/static/js/main.6a67d494.js.map"
+    "main.2e6d2e5e.js.map": "/Map/static/js/main.2e6d2e5e.js.map"
   },
   "entrypoints": [
-    "static/js/main.6a67d494.js"
+    "static/js/main.2e6d2e5e.js"
   ]
 }
