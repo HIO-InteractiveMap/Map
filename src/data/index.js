@@ -12,7 +12,7 @@ const DATA = [
   { id: 8, layer: 'stores', name: 'painting', src: IMAGES.art, size: 36, coordinates: { x: 608, y: 445 }, visible: true, hover: false },
   { id: 9, layer: 'stores', name: 'guideshop', src: IMAGES.guideshop, size: 36, coordinates: { x: 111, y: 389 }, visible: true, hover: false },
   { id: 10, layer: 'stores', name: 'pottery', src: IMAGES.pottery, size: 36, coordinates: { x: 315, y: 89 }, visible: true, hover: false },
-  { id: 11, layer: 'stores', name: 'fertilizer', src: IMAGES.fertilizer, size: 36, coordinates: { x: 387, y: 127 }, visible: true, hover: false },
+  { id: 11, layer: 'stores', name: 'fertilizers', src: IMAGES.fertilizer, size: 36, coordinates: { x: 387, y: 127 }, visible: true, hover: false },
   { id: 12, layer: 'stores', name: 'infirmary', src: IMAGES.infirmary, size: 36, coordinates: { x: 255, y: 626 }, visible: true, hover: false },
   { id: 13, layer: 'stores', name: 'pharmacy', src: IMAGES.pharmacy, size: 36, coordinates: { x: 271, y: 452 }, visible: true, hover: false },
   { id: 14, layer: 'stores', name: 'bar', src: IMAGES.bar, size: 36, coordinates: { x: 181, y: 327 }, visible: true, hover: false },

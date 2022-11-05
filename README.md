@@ -1,5 +1,4 @@
 <h1 align="center">
-  <br>
   <img src="https://i.postimg.cc/4y9W1Ts1/LOGO.png" alt="Markdownify" width="500">
   <br>
   Hell Is Others | Interactive Map
