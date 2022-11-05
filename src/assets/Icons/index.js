@@ -28,6 +28,9 @@ import fertileBullet from './Icon_FertileBullet.png';
 // NPC
 import person from './Icon_Person.png';
 
+// POI
+import blood from './Icon_Blood.png';
+
 const IMAGES = {
   // Stores
   bank,
@@ -51,7 +54,7 @@ const IMAGES = {
   elevator,
   atm,
   // Points of Intrest
-
+  blood,
   // Bullets
   bullet,
   fertileBullet,

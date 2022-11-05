@@ -1,7 +1,7 @@
 import IMAGES from '../assets/Icons';
 
 const DATA = [
-  // storess
+  // Stores
   { id: 1, layer: 'stores', name: 'bank', src: IMAGES.bank, size: 36, coordinates: { x: 392, y: 179 }, visible: true, hover: false, hover: false },
   { id: 2, layer: 'stores', name: 'church', src: IMAGES.church, size: 36, coordinates: { x: 692, y: 825 }, visible: true, hover: false },
   { id: 3, layer: 'stores', name: 'hardware', src: IMAGES.hardware, size: 36, coordinates: { x: 93, y: 702 }, visible: true, hover: false },
@@ -19,7 +19,6 @@ const DATA = [
   { id: 15, layer: 'stores', name: 'fast food', src: IMAGES.fastFood, size: 36, coordinates: { x: 269, y: 142 }, visible: true, hover: false },
   { id: 16, layer: 'stores', name: 'bakery', src: IMAGES.bakery, size: 36, coordinates: { x: 399, y: 843 }, visible: true, hover: false },
   { id: 17, layer: 'stores', name: 'supermarket', src: IMAGES.supermarket, size: 36, coordinates: { x: 736, y: 441 }, visible: true, hover: false },
-  // Services
   // Atms
   { id: 18, layer: 'services', name: 'atm', src: IMAGES.atm, size: 36, coordinates: { x: 398, y: 334 }, visible: true, hover: false },
   { id: 19, layer: 'services', name: 'atm', src: IMAGES.atm, size: 36, coordinates: { x: 404, y: 92 }, visible: true, hover: false },
@@ -49,6 +48,8 @@ const DATA = [
   { id: 42, layer: 'services', name: 'elevator', src: IMAGES.elevator, size: 36, coordinates: { x: 157, y: 594 }, visible: true, hover: false },
   { id: 43, layer: 'services', name: 'elevator', src: IMAGES.elevator, size: 36, coordinates: { x: 168, y: 682 }, visible: true, hover: false },
   { id: 44, layer: 'services', name: 'elevator', src: IMAGES.elevator, size: 36, coordinates: { x: 294, y: 670 }, visible: true, hover: false },
+  // POI's
+  { id: 45, layer: 'points of interest', name: 'Coming soon...', src: IMAGES.blood, size: 36, coordinates: { x: 9000, y: 9000 }, visible: true, hover: false },
   // Bullets
   { id: 70, layer: 'bullets', name: 'fertilizer', src: IMAGES.fertilizer, size: 36, coordinates: { x: 151, y: 49 }, visible: true, hover: false },
   { id: 71, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 677, y: 31 }, visible: true, hover: false },
