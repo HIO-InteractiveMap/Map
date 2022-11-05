@@ -4,7 +4,7 @@ import Filter from '../Filter/Filter';
 // Assets
 import LOGO from '../../assets/LOGO.png';
 
-const Sidebar = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleAll, handleToggleExclude }) => {
+const Sidebar = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleAll, handleToggleExclude, handleOnMouseEnter, handleOnMouseLeave }) => {
   return (
     <Sidebar__Container onContextMenu={(e) => e.preventDefault()}>
       <Logo__Wrapper>
@@ -24,6 +24,8 @@ const Sidebar = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleAll
         handleToggle={handleToggle}
         handleToggleAllTags={handleToggleAllTags}
         handleToggleExclude={handleToggleExclude}
+        handleOnMouseEnter={handleOnMouseEnter}
+        handleOnMouseLeave={handleOnMouseLeave}
       />
     </Sidebar__Container>
   );

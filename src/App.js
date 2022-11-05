@@ -65,6 +65,25 @@ function App() {
     );
   };
 
+  const handleOnMouseEnter = (id) => {
+    setICON_DATA((current) =>
+      current.map((obj) => {
+        if (obj.name != id) {
+          return { ...obj, hover: false };
+        }
+        return { ...obj, hover: true };
+      })
+    );
+  };
+
+  const handleOnMouseLeave = () => {
+    setICON_DATA((current) =>
+      current.map((obj) => {
+        return { ...obj, hover: false };
+      })
+    );
+  };
+
   const icons = [];
   ICON_DATA.map((icon) => {
     icon.visible &&
@@ -75,6 +94,7 @@ function App() {
           y={icon.coordinates.y}
           src={icon.src}
           size={icon.size}
+          hover={icon.hover}
         />
       );
   });
@@ -89,6 +109,8 @@ function App() {
         handleToggleAllTags={handleToggleAllTags}
         handleToggleAll={handleToggleAll}
         handleToggleExclude={handleToggleExclude}
+        handleOnMouseEnter={handleOnMouseEnter}
+        handleOnMouseLeave={handleOnMouseLeave}
       />
 
       <Content__Container>

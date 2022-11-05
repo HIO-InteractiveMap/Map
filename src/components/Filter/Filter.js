@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Filter = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleExclude }) => {
+const Filter = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleExclude, handleOnMouseEnter, handleOnMouseLeave }) => {
   const filters = [];
   getUniqueLayers(ICON_DATA).forEach((layer) => {
-    const tags = getTags2(ICON_DATA, layer, handleToggle, handleToggleExclude);
+    const tags = getTags2(ICON_DATA, layer, handleToggle, handleToggleExclude, handleOnMouseEnter, handleOnMouseLeave);
     const halfway = Math.floor(tags.length / 2);
     filters.push(
       <Layer__Container key={layer}>
@@ -24,7 +24,7 @@ const Filter = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleExcl
   return <Layer__Wrapper>{filters}</Layer__Wrapper>;
 };
 
-const getTags2 = (ICON_DATA, layer, handleToggle, handleToggleExclude) => {
+const getTags2 = (ICON_DATA, layer, handleToggle, handleToggleExclude, handleOnMouseEnter, handleOnMouseLeave) => {
   const tags = [];
   ICON_DATA.map((element, index) => {
     if (element.layer == layer) {
@@ -32,16 +32,16 @@ const getTags2 = (ICON_DATA, layer, handleToggle, handleToggleExclude) => {
         tags.push(
           <Tag__Filter
             visible={element.visible}
-            key={element.id}>
+            key={element.id}
+            onClick={() => handleToggle(element.name, layer)}
+            onContextMenu={() => handleToggleExclude(element.name)}
+            onMouseEnter={() => handleOnMouseEnter(element.name)}
+            onMouseLeave={() => handleOnMouseLeave()}>
             <Tag__Icon>
               <img src={element.src}></img>
             </Tag__Icon>
             <Tag__Text>
-              <p
-                onClick={() => handleToggle(element.name, layer)}
-                onContextMenu={() => handleToggleExclude(element.name)}>
-                {element.name}
-              </p>
+              <p>{element.name}</p>
             </Tag__Text>
             <Tag__Amount></Tag__Amount>
           </Tag__Filter>
@@ -78,6 +78,7 @@ const Tag__Filter = styled.div`
   opacity: ${(props) => props.visible || '0.4'};
 
   user-select: none;
+  cursor: pointer;
 `;
 
 const Tag__Icon = styled.div`
@@ -94,7 +95,6 @@ const Tag__Icon = styled.div`
 
 const Tag__Text = styled.div`
   p {
-    cursor: pointer;
     font-size: 16px;
     text-transform: uppercase;
 
