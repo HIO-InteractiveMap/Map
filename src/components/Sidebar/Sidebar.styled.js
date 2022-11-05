@@ -9,6 +9,8 @@ export const Sidebar__Container = styled.div`
   padding: 15px;
   padding-right: 17px;
 
+  overflow-y: scroll;
+
   // First border
   border-right: 2px solid #cf985f;
   // Second Border
@@ -20,9 +22,16 @@ export const Sidebar__Container = styled.div`
     top: 0px;
     left: calc(100% - 5px);
     right: 2px;
-    bottom: 0px;
+    bottom: -25vh;
     border-right: 2px solid #86623e;
   }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 export const Logo__Wrapper = styled.div`

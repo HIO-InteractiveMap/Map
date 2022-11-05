@@ -123,7 +123,6 @@ function App() {
 const Content__Container = styled.div`
   min-width: 400px;
   flex: 1;
-  overflow: hidden;
 
   cursor: move;
   cursor: grab;
