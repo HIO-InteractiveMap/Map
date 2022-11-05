@@ -4,24 +4,26 @@ import Filter from '../Filter/Filter';
 // Assets
 import LOGO from '../../assets/LOGO.png';
 
-const Sidebar = ({ ICON_DATA, handleToggle }) => {
+const Sidebar = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleAll, handleToggleExclude }) => {
   return (
-    <Sidebar__Container>
+    <Sidebar__Container onContextMenu={(e) => e.preventDefault()}>
       <Logo__Wrapper>
         <img src={LOGO}></img>
       </Logo__Wrapper>
-      <Page__Title>Hell Is Others Interactive Map</Page__Title>
+      {/* <Page__Title>Hell Is Others Interactive Map</Page__Title> */}
       {/* <Search__Input>
         <span>Search...</span>
         <span>SEARCH</span>
       </Search__Input> */}
       <Action__Buttons>
-        <span>SHOW ALL</span>
-        <span>HIDE ALL</span>
+        <span onClick={() => handleToggleAll(true)}>SHOW ALL</span>
+        <span onClick={() => handleToggleAll(false)}>HIDE ALL</span>
       </Action__Buttons>
       <Filter
         ICON_DATA={ICON_DATA}
         handleToggle={handleToggle}
+        handleToggleAllTags={handleToggleAllTags}
+        handleToggleExclude={handleToggleExclude}
       />
     </Sidebar__Container>
   );

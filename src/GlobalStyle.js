@@ -5,8 +5,8 @@ const GlobalStyle = createGlobalStyle`
   --blue: #1e90ff;
   --white: #ffffff;
   --primary_color: #CF985F;
-  --icon_background: rgba(216, 183, 167, 0.75);
-  --icon_foreground: #32221E;
+  --icon_background: rgb(216, 183, 167);
+  --icon_foreground: #241815;
 }
 
   * {

@@ -13,28 +13,61 @@ import GlobalStyle from './GlobalStyle';
 import DATA from './data';
 
 function App() {
-  console.log('');
   const [ICON_DATA, setICON_DATA] = useState(DATA);
 
-  const handleToggle = (id, layer) => {
-    console.log(id);
-
+  const handleToggle = (id) => {
     setICON_DATA((current) =>
       current.map((obj) => {
-        if (obj.id == id) {
-          return { ...obj, visable: !obj.visable };
+        if (obj.name == id) {
+          return { ...obj, visible: !obj.visible };
         }
-
         return obj;
       })
     );
   };
 
-  console.log(ICON_DATA);
+  const handleToggleAllTags = (layer) => {
+    setICON_DATA((current) => {
+      const newData = [];
+
+      if (current.filter((obj) => obj.layer.includes(layer)).filter((obj) => obj.visible === false).length > 0) {
+        current.map((obj) => {
+          obj.layer == layer ? newData.push({ ...obj, visible: true }) : newData.push({ ...obj });
+        });
+      } else {
+        current.map((obj) => {
+          obj.layer == layer ? newData.push({ ...obj, visible: false }) : newData.push({ ...obj });
+        });
+      }
+
+      return newData;
+    });
+  };
+
+  const handleToggleAll = (option) => {
+    setICON_DATA((current) => {
+      const newData = [];
+      current.map((obj) => {
+        newData.push({ ...obj, visible: option });
+      });
+      return newData;
+    });
+  };
+
+  const handleToggleExclude = (id) => {
+    setICON_DATA((current) =>
+      current.map((obj) => {
+        if (obj.name != id) {
+          return { ...obj, visible: false };
+        }
+        return { ...obj, visible: true };
+      })
+    );
+  };
 
   const icons = [];
   ICON_DATA.map((icon) => {
-    icon.visable &&
+    icon.visible &&
       icons.push(
         <Icon
           key={icon.id}
@@ -53,6 +86,9 @@ function App() {
       <Sidebar
         ICON_DATA={ICON_DATA}
         handleToggle={handleToggle}
+        handleToggleAllTags={handleToggleAllTags}
+        handleToggleAll={handleToggleAll}
+        handleToggleExclude={handleToggleExclude}
       />
 
       <Content__Container>

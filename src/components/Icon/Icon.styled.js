@@ -19,7 +19,7 @@ export const Icon__Container = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 100%;
+  width: 22px;
   height: 100%;
   object-fit: contain;
   filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(325deg) brightness(99%) contrast(85%);

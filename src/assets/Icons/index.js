@@ -21,6 +21,9 @@ import supermarket from './Icon_NonPerishable.png';
 import elevator from './Icon_Elevator.png';
 import atm from './Icon_Currency.png';
 
+// NPC
+import person from './Icon_Person.png';
+
 const IMAGES = {
   // Stores
   bank,
@@ -44,6 +47,9 @@ const IMAGES = {
   elevator,
   atm,
   // Points of Intrest
+
+  // NPC
+  person,
 };
 
 export default IMAGES;

@@ -58,6 +58,12 @@ export const Action__Buttons = styled.div`
 
   & > span {
     font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+      user-select: none;
+    }
   }
 `;
 
