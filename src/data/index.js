@@ -50,7 +50,20 @@ const DATA = [
   { id: 43, layer: 'services', name: 'elevator', src: IMAGES.elevator, size: 36, coordinates: { x: 168, y: 682 }, visible: true },
   { id: 44, layer: 'services', name: 'elevator', src: IMAGES.elevator, size: 36, coordinates: { x: 294, y: 670 }, visible: true },
   // Bullets
-
+  { id: 70, layer: 'bullets', name: 'fertilizer', src: IMAGES.fertilizer, size: 36, coordinates: { x: 151, y: 49 }, visible: true },
+  { id: 71, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 677, y: 31 }, visible: true },
+  { id: 72, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 778, y: 110 }, visible: true },
+  { id: 73, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 629, y: 185 }, visible: true },
+  { id: 74, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 519, y: 185 }, visible: true },
+  { id: 75, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 451, y: 426 }, visible: true },
+  { id: 76, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 169, y: 426 }, visible: true },
+  { id: 77, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 255, y: 605 }, visible: true },
+  { id: 78, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 169, y: 664 }, visible: true },
+  { id: 79, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 122, y: 845 }, visible: true },
+  { id: 80, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 189, y: 845 }, visible: true },
+  { id: 81, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 36, coordinates: { x: 692, y: 898 }, visible: true },
+  { id: 82, layer: 'bullets', name: 'normal', src: IMAGES.bullet, size: 72, coordinates: { x: 430, y: 630 }, visible: true },
+  { id: 83, layer: 'bullets', name: 'modified', src: IMAGES.fertileBullet, size: 36, coordinates: { x: 568, y: 151 }, visible: true },
   // NPCS
   { id: 100, layer: 'npc', name: 'maggie', src: IMAGES.person, size: 36, coordinates: { x: 604, y: 664 }, visible: true },
   { id: 101, layer: 'npc', name: 'maggie', src: IMAGES.person, size: 36, coordinates: { x: 604, y: 569 }, visible: true },
@@ -59,7 +72,7 @@ const DATA = [
   { id: 104, layer: 'npc', name: 'jacob', src: IMAGES.person, size: 36, coordinates: { x: 563, y: 406 }, visible: true },
   { id: 105, layer: 'npc', name: 'deacon', src: IMAGES.person, size: 72, coordinates: { x: 431, y: 324 }, visible: true },
   { id: 106, layer: 'npc', name: 'conroy', src: IMAGES.person, size: 36, coordinates: { x: 513, y: 86 }, visible: true },
-  { id: 106, layer: 'npc', name: 'more soon...', src: IMAGES.person, size: 0, coordinates: { x: 9000, y: 9000 }, visible: true },
+  { id: 107, layer: 'npc', name: 'more soon...', src: IMAGES.person, size: 0, coordinates: { x: 9000, y: 9000 }, visible: true },
 ];
 
 export default DATA;

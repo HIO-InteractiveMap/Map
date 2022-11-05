@@ -21,6 +21,10 @@ import supermarket from './Icon_NonPerishable.png';
 import elevator from './Icon_Elevator.png';
 import atm from './Icon_Currency.png';
 
+// Bullets
+import bullet from './Icon_Bullet.png';
+import fertileBullet from './Icon_FertileBullet.png';
+
 // NPC
 import person from './Icon_Person.png';
 
@@ -48,6 +52,9 @@ const IMAGES = {
   atm,
   // Points of Intrest
 
+  // Bullets
+  bullet,
+  fertileBullet,
   // NPC
   person,
 };
