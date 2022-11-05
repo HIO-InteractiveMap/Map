@@ -17,7 +17,10 @@ const Map = ({ children }) => {
       initialScale={1}
       minScale={0.2}
       maxScale={2}
-      doubleClick={{ disabled: true }}>
+      doubleClick={{ disabled: true }}
+      panning={{ velocityDisabled: true }}
+      initialPositionX={10}
+      initialPositionY={10}>
       <TransformComponent>
         <Map__Container>
           <Map__Wrapper src={MapIMG} />

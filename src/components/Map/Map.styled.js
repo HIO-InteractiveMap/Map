@@ -7,5 +7,5 @@ export const Map__Wrapper = styled.img`
 
 export const Map__Container = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 `;
