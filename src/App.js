@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Components
 import Map from './components/Map/Map';
@@ -120,7 +120,15 @@ function App() {
       <GlobalStyle />
 
       {windowSize.innerWidth < 800 ? (
-        <Topbar></Topbar>
+        <Topbar
+          ICON_DATA={ICON_DATA}
+          handleToggle={handleToggle}
+          handleToggleAllTags={handleToggleAllTags}
+          handleToggleAll={handleToggleAll}
+          handleToggleExclude={handleToggleExclude}
+          handleOnMouseEnter={handleOnMouseEnter}
+          handleOnMouseLeave={handleOnMouseLeave}
+        />
       ) : (
         <Sidebar__Container navIsOpen={navIsOpen}>
           <Sidebar__Close
@@ -142,7 +150,7 @@ function App() {
       )}
 
       <Content__Container>
-        <Map initialPosition={windowSize.innerWidth < 800 ? 10 : 410}>{icons}</Map>
+        <Map initialPosition={windowSize.innerWidth < 800 ? -40 : 410}>{icons}</Map>
       </Content__Container>
     </div>
   );

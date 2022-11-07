@@ -1,15 +1,11 @@
 import { Sidebar__Container, Logo__Wrapper, Page__Title, Action__Buttons, Search__Input, Filter__Container } from './Sidebar.styled';
 import Filter from '../Filter/Filter';
-
-// Assets
-import LOGO from '../../assets/LOGO.png';
+import Logo from '../Logo/Logo';
 
 const Sidebar = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleAll, handleToggleExclude, handleOnMouseEnter, handleOnMouseLeave }) => {
   return (
     <Sidebar__Container onContextMenu={(e) => e.preventDefault()}>
-      <Logo__Wrapper>
-        <img src={LOGO}></img>
-      </Logo__Wrapper>
+      <Logo />
       {/* <Page__Title>Hell Is Others Interactive Map</Page__Title> */}
       {/* <Search__Input>
         <span>Search...</span>

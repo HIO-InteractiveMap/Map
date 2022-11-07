@@ -17,16 +17,6 @@ export const Sidebar__Container = styled.div`
   scrollbar-width: none;
 `;
 
-export const Logo__Wrapper = styled.div`
-  margin-top: -20px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-`;
-
 export const Page__Title = styled.h1`
   text-align: center;
   font-size: 16px;
