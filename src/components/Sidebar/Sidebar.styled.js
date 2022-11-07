@@ -5,26 +5,9 @@ export const Sidebar__Container = styled.div`
   flex-direction: column;
   gap: 10px;
 
-  width: 400px;
   padding: 15px;
-  padding-right: 17px;
 
   overflow-y: scroll;
-
-  // First border
-  border-right: 2px solid #cf985f;
-  // Second Border
-  position: relative;
-  &:before {
-    content: ' ';
-    position: absolute;
-    z-index: -1;
-    top: 0px;
-    left: calc(100% - 5px);
-    right: 2px;
-    bottom: -25vh;
-    border-right: 2px solid #86623e;
-  }
 
   &::-webkit-scrollbar {
     display: none;

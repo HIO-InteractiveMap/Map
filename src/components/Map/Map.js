@@ -10,7 +10,7 @@ import Icon from '../Icon/Icon';
 // Assets
 import MapIMG from '../../assets/Map_Downtown_EN_v2.png';
 
-const Map = ({ children }) => {
+const Map = ({ children, initialPosition }) => {
   return (
     <TransformWrapper
       limitToBounds={false}
@@ -19,7 +19,7 @@ const Map = ({ children }) => {
       maxScale={2}
       doubleClick={{ disabled: true }}
       panning={{ velocityDisabled: true }}
-      initialPositionX={10}
+      initialPositionX={initialPosition}
       initialPositionY={10}>
       <TransformComponent>
         <Map__Container>

@@ -32,20 +32,3 @@ const Sidebar = ({ ICON_DATA, handleToggle, handleToggleAllTags, handleToggleAll
 };
 
 export default Sidebar;
-
-// return (
-//   <div
-//     className='layer'
-//     key={key}>
-//     <h1>{key}</h1>
-//     {ICON_DATA[key].map((el) => {
-//       return (
-//         <p
-//           key={el.id}
-//           onClick={() => handleToggle(el.id, key)}>
-//           {el.name}
-//         </p>
-//       );
-//     })}
-//   </div>
-// );

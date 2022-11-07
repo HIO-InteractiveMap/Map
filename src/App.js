@@ -1,19 +1,35 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
-import styled from 'styled-components';
 
 // Components
 import Map from './components/Map/Map';
 import Icon from './components/Icon/Icon';
 import Sidebar from './components/Sidebar/Sidebar';
+import Topbar from './components/Topbar/Topbar';
 
 // Style
 import GlobalStyle from './GlobalStyle';
+import Chevron from './assets/right-chevron.png';
+import { Content__Container, Sidebar__Close, Sidebar__Container } from './App.styled';
 
 // Data
 import DATA from './data';
 
 function App() {
   const [ICON_DATA, setICON_DATA] = useState(DATA);
+  const [navIsOpen, setNavIsOpen] = useState(true);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const handleToggle = (id) => {
     setICON_DATA((current) =>
@@ -103,37 +119,38 @@ function App() {
     <div className='app'>
       <GlobalStyle />
 
-      <Sidebar
-        ICON_DATA={ICON_DATA}
-        handleToggle={handleToggle}
-        handleToggleAllTags={handleToggleAllTags}
-        handleToggleAll={handleToggleAll}
-        handleToggleExclude={handleToggleExclude}
-        handleOnMouseEnter={handleOnMouseEnter}
-        handleOnMouseLeave={handleOnMouseLeave}
-      />
+      {windowSize.innerWidth < 800 ? (
+        <Topbar></Topbar>
+      ) : (
+        <Sidebar__Container navIsOpen={navIsOpen}>
+          <Sidebar__Close
+            navIsOpen={navIsOpen}
+            onClick={() => setNavIsOpen(!navIsOpen)}>
+            <img src={Chevron}></img>
+          </Sidebar__Close>
+
+          <Sidebar
+            ICON_DATA={ICON_DATA}
+            handleToggle={handleToggle}
+            handleToggleAllTags={handleToggleAllTags}
+            handleToggleAll={handleToggleAll}
+            handleToggleExclude={handleToggleExclude}
+            handleOnMouseEnter={handleOnMouseEnter}
+            handleOnMouseLeave={handleOnMouseLeave}
+          />
+        </Sidebar__Container>
+      )}
 
       <Content__Container>
-        <Map>{icons}</Map>
+        <Map initialPosition={windowSize.innerWidth < 800 ? 10 : 410}>{icons}</Map>
       </Content__Container>
     </div>
   );
 }
 
-const Content__Container = styled.div`
-  min-width: 400px;
-  flex: 1;
-
-  cursor: move;
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-
-  &:active {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
-  }
-`;
+function getWindowSize() {
+  const { innerWidth, innerHeight } = window;
+  return { innerWidth, innerHeight };
+}
 
 export default App;
